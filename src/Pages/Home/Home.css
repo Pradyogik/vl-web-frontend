@@ -1,0 +1,148 @@
+.highlight {
+  background-color: #fff2cc;
+  padding: 0 5px;
+  color: #ffc107;
+  font-family: "Inter", sans-serif;
+  border-radius: 15px;
+}
+
+.heroContent h1 {
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-size: 54px;
+  line-height: 1.5;
+  opacity: 0;
+  animation: appear 2s forwards ease-out;
+  transform: perspective(0px) translateX(0px) translateY(30px) scale(.7) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);  
+}
+
+@keyframes appear{
+    100%{
+        opacity: 1;
+        transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
+    }
+} 
+
+.lead {
+  font-family: "Inter", sans-serif;
+  color: #635e7f;
+  font-weight: 500;
+  line-height: 1.9;
+  opacity: 0;
+  animation: appear 2s forwards ease-out;
+  transform: perspective(0px) translateX(0px) translateY(30px) scale(.7) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px); 
+}
+.heroBtnContainer{
+    opacity: 0;
+    transition-delay: 2s;
+    animation: appear 2s forwards ease-out;
+    transform: perspective(0px) translateX(0px) translateY(0px) scale(.9) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px); 
+}
+.heroBtnContainer a:nth-child(1) {
+  border-radius: 10px;
+  background: rgb(152, 136, 244);
+  background: linear-gradient(
+    90deg,
+    rgba(152, 136, 244, 1) 0%,
+    rgba(113, 93, 227, 1) 100%
+  );
+  color: white;
+  font-weight: 500;
+}
+
+.heroBtnContainer a:nth-child(2) {
+  padding: 0.7rem 1.4rem;
+  border-color: #ffc107;
+  color: #ffc107;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.heroBtnContainer a:nth-child(2):hover {
+  /* background-color: #ffc107;
+    color: #fff !important; */
+}
+
+.heroLastHeading {
+    color: #635E80;
+}
+.heroContent{
+    padding: 0 !important;
+    flex-grow: 1;
+}
+.leftImgContainer{
+    opacity: 0;
+    animation: appear 1s forwards ease-out;
+    transform: perspective(1200px) translateX(-150px) translateY(0px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
+    flex-grow: 1;
+
+}
+.RightImgContainer{
+    opacity: 1;
+    animation: appear 1s forwards ease-out;
+    transform: perspective(500px) translateX(150px) translateY(0px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);  
+    flex-grow: 1;
+
+}
+ /* Mobile Phones (Portrait) */
+@media only screen and (max-width: 480px) {
+    .heroContainer{
+        flex-direction: column;
+        padding: 0 !important;
+    }
+    .heroContent h1 {
+    font-size: 1.2rem;
+    }
+    .lead {
+        font-size: .7rem;
+    }
+    .heroBtnContainer {
+        margin-top: 1rem !important;
+        align-items: center;
+        gap: 1rem !important;
+    }
+    .heroBtnContainer a:nth-child(1) {
+        font-size: .8rem;
+    }
+    .heroBtnContainer a:nth-child(2) {
+        font-size: .8rem;
+        padding: 0.55rem 1.4rem;
+    }
+    .heroBtnContainer a:nth-child(2) img {
+        width: 15px;
+        height: 15px;
+    }
+    .heroLastHeading{
+        font-size: .7rem;
+
+    }
+
+
+  }
+  
+  /* Mobile Phones (Landscape) */
+  @media only screen and (min-width: 481px) and (max-width: 767px) {
+    /* Styles for mobile phones in landscape orientation */
+  }
+  
+  /* Tablets (Portrait) */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Styles for tablets in portrait orientation */
+  }
+  
+  /* Tablets (Landscape) */
+  @media only screen and (min-width: 992px) and (max-width: 1023px) {
+    /* Styles for tablets in landscape orientation */
+  }
+  
+  /* Small Laptops and Desktops */
+  @media only screen and (min-width: 1024px) and (max-width: 1199px) {
+    /* Styles for small laptops and desktops */
+  }
+  
+  /* Medium to Large Desktops */
+  @media only screen and (min-width: 1200px) and (max-width: 1439px) {
+    /* Styles for medium to large desktops */
+  }
+  
+  
