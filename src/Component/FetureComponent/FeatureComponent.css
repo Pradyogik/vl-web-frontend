@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+.featureCompContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.featureCompImg {
+  width: 40%;
+  animation: slider 2s cubic-bezier(0.67, 0.66, 0.74, 0.74) infinite;
+}
+.featureCompImg img{
+    border-radius: 20px;
+}
+@keyframes slider {
+  0% {
+    transform: translateX(-20.64px) translateY(0px) scale(1) rotate(0deg)
+      rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px) scale(1) rotate(0deg)
+      rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
+  }
+}
+.featureCompContent {
+  width: 50%;
+  
+}
+.featureCompContent h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+.featureCompContent h5 {
+  color: #4f5874;
+  font-weight: 500;
+}
+.featureCompContent span:nth-child(1) {
+  background-color: #ffe69999;
+  color: rgb(252, 189, 1);
+  display: flex;
+  width: fit-content !important;
+  gap: 5px;
+  align-items: center;
+  padding: 5px;
+  border-radius: 7px;
+}
+.featureCompContent span > span:nth-child(1) {
+  background-color: rgb(252, 189, 1);
+  border-radius: 50%;
+  display: inline-block;
+  width: 5px;
+  height: 6px;
+  margin-left: 5px;
+}
+.featureCompContent  .btn {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    box-shadow: rgba(30, 7, 81, 0.12) 0px 4px 6px 0px;
+  }
+  .featureCompContent .btn:hover i {
+    margin-left: 1rem;
+    transition: all 75ms linear;
+    transition-delay: 0ms;
+  }
+/* Mobile Phones (Portrait) */
+@media only screen and (max-width: 480px) {
+    .featureCompContainer{
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;  
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+      .featureCompContent span:nth-child(1){
+        font-size: .6rem;
+    
+      }
+      .featureCompContent {
+        width: 100%;
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+        
+      }
+      .featureCompContent h1{
+        font-size: 1.2rem
+      }
+      .featureCompContent h5{
+        font-size: 0.8rem;
+      }
+      .featureCompContent button{
+        font-size: .8rem;
+      }
+      .featureCompImg{
+        width: 100%;
+        margin-top: 1rem;
+        justify-content: center;
+      }
+      .featureCompImg img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: .5rem;
+      }
+  }
+  
+  /* Mobile Phones (Landscape) */
+  @media only screen and (min-width: 481px) and (max-width: 767px) {
+    .featureCompContainer{
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;  
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+      .featureCompContent span:nth-child(1){
+        font-size: .6rem;
+      
+      }
+      .featureCompContent {
+        width: 100%;
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+        
+      }
+      .featureCompContent h1{
+        font-size: clamp(1.2rem, 2vw + 1rem, 2rem);
+      
+      }
+      .featureCompContent  h5{
+        /* font-size: 0.8rem; */
+        font-size: clamp(0.8rem, 1vw + 0.9rem, 1rem);
+      
+      }
+      .featureCompContent  button{
+        /* font-size: .8rem; */
+        font-size: clamp(0.8rem, 1vw + 0.9rem, 1rem);
+      
+      }
+      .featureCompImg {
+        width: 100%;
+        margin-top: 1rem;
+        justify-content: center;
+      }
+      .featureCompImg img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: .5rem;
+      }
+      
+  }
+  
+  /* Tablets (Portrait) */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .featureCompContainer{
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        
+        /* justify-content: flex-end; */
+       }
+       .featureCompImg{
+        width: 40% !important;
+        /* justify-content: ; */
+       }
+       .featureCompImg img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        
+       }
+       .featureCompContent{
+        width: 60%;
+       }
+       .featureCompContent h1{
+        font-size: 2.3rem;
+        padding: 0 !important;
+        padding-top: .5rem !important;
+       }
+       .featureCompContent h5{
+        font-size: 1rem;
+        padding: 0 !important;
+        padding-top: .5rem !important;
+       }
+       .featureCompContent button{
+        margin:  0 !important;
+        margin-top: .5rem !important;
+       }
+  }
+  
+  /* Tablets (Landscape) */
+  @media only screen and (min-width: 992px) and (max-width: 1023px) {
+    .featureCompContent h4 br{
+        display: none; 
+       }
+       .featureCompContainer{
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        /* justify-content: flex-end; */
+       }
+       .featureCompImg{
+        width: 40% !important;
+        /* justify-content: ; */
+       }
+       .featureCompImg img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        
+       }
+       .featureCompContent{
+        width: 60%;
+       }
+  }
+  
+  /* Small Laptops and Desktops */
+  @media only screen and (min-width: 1024px) and (max-width: 1199px) {
+    .featureCompContent h4 br{
+        display: none; 
+       }
+       .featureCompContainer{
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        /* justify-content: flex-end; */
+       }
+       .featureCompImg{
+        width: 40% !important;
+        /* justify-content: ; */
+       }
+       .featureCompImg img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        
+       }
+       .featureCompContent{
+        width: 60%;
+       }
+  }

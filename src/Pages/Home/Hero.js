@@ -9,7 +9,7 @@ import bottomImg from '../../Assets/Group 1000004931.png';
 
 function Hero() {
   return (<>
-  <div className='container-fluid heroContainer pt-5 px-0 d-flex position-relative'>
+  <div className='container-fluid heroContainer pt-5 px-0 d-flex  '>
   <div className='leftImgContainer'>
     <img style={{width: '100%' , height: '100%' , objectFit: 'cover'}} src={leftImg}/>
   </div>
@@ -26,7 +26,6 @@ function Hero() {
     <img style={{width: '100%' , height: '100%' , objectFit: 'cover'}} src={rightImg}/>
   </div> 
     </div> 
-
   </>)
 }
 
