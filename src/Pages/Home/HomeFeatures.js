@@ -4,8 +4,8 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import bannerImg from '../../Assets/Group 1000004935.png';
-import animateBannerImg from '../../Assets/Group 1000004936.png';
+import bannerImg from '../../Assets/Group 1000004938.png';
+import animateBannerImg from '../../Assets/Group 1000004939.png';
 
 
 function HomeFeatures(){
@@ -28,16 +28,18 @@ function HomeFeatures(){
 
     <div className='hFeatureBannerContent'>
 
-    <span data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span></span> FEATURES </span>
+    <span className='hfeatureTag' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span className='hfeatureTag'></span> FEATURES </span>
     <h1 className='pt-4' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">Manage your store <br/> using <span style={{color: "#ffc107"}}>Voice</span> commands.</h1>
     <h5 className='pt-4' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">Effortlessly manage your store  with intuitive voice commands, streamlining tasks like inventory updates, order management, and product listings for a seamless e-commerce experience.</h5>
    
-    <button class="btn mt-4" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">Get early access <i><FontAwesomeIcon icon={faArrowRight} style={{color: 'white'}} /> </i></button>
+    {/* <button class="btn mt-4" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">Get early access <i><FontAwesomeIcon icon={faArrowRight} style={{color: 'white'}} /> </i></button> */}
+
+    <button class=" mt-4 btn button button--calypso" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span>Get early access</span> </button>
 
     </div>
 
     <div className='hFeatureBannerImg ' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">
-        <img src={bannerImg} />
+        <img className='bannerImg' src={bannerImg} />
         <img className='animeBannerImg' src={animateBannerImg} />
 
     </div>

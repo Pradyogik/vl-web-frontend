@@ -16,12 +16,13 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
     </div>
 
     <div className='featureCompContent p-3'>
-    <span data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span></span> FEATURES </span>
-    <h1 className='pt-4' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> {props.headingPart1}  using <span style={{color: "#ffc107", backgroundColor: 'transparent' , display: 'inline-block' , fontSize: 'inherit'}}> {props.highlight} </span> {props.headingPart2}</h1>
+    <span className='featureTag' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span></span> FEATURES </span>
+    <h1 className='pt-4' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> 
+    <span className='spanBlack' style={{color: 'black' ,background: 'none', display: 'inline' , fontSize: 'inherit'}}>{props.headingPart1}</span>    <span style={{color: "#ffc107", backgroundColor: 'transparent' , display: 'inline' , fontSize: 'inherit'}} className='spanYellow'> {props.highlight} </span> {props.headingPart2}</h1>
 
     <h5 className='pt-4' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">{props.para}</h5>
 
-    <button class="btn mt-4" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">Get early access <i><FontAwesomeIcon icon={faArrowRight} style={{color: 'white'}} /> </i></button>
+    <button class=" mt-4 btn button button--calypso" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span>Get early access</span> </button>
 
     </div>
 
@@ -36,7 +37,7 @@ export default React.memo(FeatureComponent);
 export function SecondFeaturedComponent(props){
 
     return(<>
-    <div className={`container featureCompContainer py-5  ${props.direction}` }>
+    <div className={`container featureCompContainer featureCompContainer2 py-5  ${props.direction}` }>
 
 
     <div className='featureCompContent p-2'>
@@ -45,7 +46,7 @@ export function SecondFeaturedComponent(props){
 
     <h5 className='pt-4 ' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">{props.para2}</h5>
 
-    <button class="btn mt-4" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">Get early access <i><FontAwesomeIcon icon={faArrowRight} style={{color: 'white'}} /> </i></button>
+    <button class=" mt-4 btn button button--calypso" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span>Get early access</span> </button>
 
     </div>
 
@@ -59,5 +60,9 @@ export function SecondFeaturedComponent(props){
     
 
     </div>
+
+
+
+
     </>)
 }

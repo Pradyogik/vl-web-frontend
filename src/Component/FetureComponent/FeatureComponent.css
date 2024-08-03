@@ -8,21 +8,31 @@
 }
 .featureCompImg {
   width: 40%;
-  animation: slider 2s cubic-bezier(0.67, 0.66, 0.74, 0.74) infinite;
+  animation: slider 7s cubic-bezier(0.67, 0.66, 0.74, 0.74) infinite both;
 }
 .featureCompImg img{
     border-radius: 20px;
 }
-@keyframes slider {
-  0% {
-    transform: translateX(-20.64px) translateY(0px) scale(1) rotate(0deg)
-      rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
-  }
-  100% {
-    transform: translateX(0px) translateY(0px) scale(1) rotate(0deg)
-      rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
-  }
-}
+/* translateY(0px) scale(1) rotate(0deg)
+      rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px); */
+      @keyframes slider {
+        0% {
+          transform: translateX(0px);
+        }
+        25%{
+          transform: translateX(10px);
+        }
+        50% {
+          transform: translateX(20px);
+        }
+        75% {
+          transform: translateX(10px);
+        }
+        100%{
+          transform: translateX(0px);
+      
+        }
+      }
 .featureCompContent {
   width: 50%;
   
@@ -36,7 +46,7 @@
   color: #4f5874;
   font-weight: 500;
 }
-.featureCompContent span:nth-child(1) {
+.featureCompContent .featureTag:nth-child(1) {
   background-color: #ffe69999;
   color: rgb(252, 189, 1);
   display: flex;
@@ -46,7 +56,7 @@
   padding: 5px;
   border-radius: 7px;
 }
-.featureCompContent span > span:nth-child(1) {
+.featureCompContent .featureTag > span:nth-child(1) {
   background-color: rgb(252, 189, 1);
   border-radius: 50%;
   display: inline-block;
@@ -72,11 +82,14 @@
     .featureCompContainer{
         padding-top: 1rem !important;
         padding-bottom: 1rem !important;  
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center !important;
         align-items: center !important;
       }
-      .featureCompContent span:nth-child(1){
+      .featureCompContainer2{
+        flex-direction: column !important;
+      }
+      .featureCompContent .featureTag:nth-child(1){
         font-size: .6rem;
     
       }
@@ -116,9 +129,12 @@
     .featureCompContainer{
         padding-top: 1rem !important;
         padding-bottom: 1rem !important;  
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center !important;
         align-items: center !important;
+      }
+      .featureCompContainer2{
+        flex-direction: column !important;
       }
       .featureCompContent span:nth-child(1){
         font-size: .6rem;
@@ -250,3 +266,123 @@
         width: 60%;
        }
   }
+
+  /* discovery section */
+  .discoveryWrapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .discoveryWrapper h4{
+    color: #ffc107 !important;
+    background-color: white;
+    padding: .5rem 1rem;
+    border-radius: 25px;
+    box-shadow: -1px -1px 5px 0px rgba(252, 189, 1, 0.25), -1px -1px 5px 0px rgba(0, 102, 255, 0.1), inset 1px 1px 0px 0px  rgba(0, 102, 255, 0.05);
+    font-size: 1rem;
+    font-weight: 500;
+    width: fit-content !important; 
+
+    
+  };
+  .discoveryWrapper .hd1{
+    color: #ffc107 !important;
+  }
+  .lastMarquee span{
+    background-color: rgba(84, 84, 84, 0.03);
+    color: rgba(48, 48, 48, 0.8);
+  }
+
+  /* Mobile Phones (Portrait) */
+@media only screen and (max-width: 480px) {
+  .discoveryWrapper h1{
+    font-size: 1.2rem;
+  }
+  .discoveryWrapper h4 {
+    font-size: .7rem;
+  }
+  .discoveryWrapper h5{
+    font-size: .8rem;
+    padding: 0 .5rem;
+  }
+  .discoveryWrapper h5 br{
+    display: none;
+  }
+  .lastMarquee span{
+    font-size: .7rem;
+    margin: .3rem;
+  }
+  
+}
+
+/* Mobile Phones (Landscape) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .discoveryWrapper h1{
+    font-size: clamp(1.2rem, 2vw + 1rem, 2rem);
+  }
+  .discoveryWrapper h4 {
+    font-size: .7rem;
+  }
+  .discoveryWrapper h5{
+    font-size: clamp(0.8rem, 1vw + 0.9rem, 1rem);
+    padding: 0 2rem;
+  }
+  .discoveryWrapper h5 br{
+    display: none;
+  }
+  .lastMarquee span{
+    font-size: .9rem;
+    margin: .4rem;
+  }
+}
+
+/* Tablets (Portrait) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .discoveryWrapper h1{
+    font-size: 2.3rem !important;
+  }
+  .discoveryWrapper h4 {
+    font-size: .8rem;
+  }
+  .discoveryWrapper h5{
+    font-size: 1rem;
+    padding: 0 2rem;
+  }
+  .discoveryWrapper h5 br{
+    /* display: none; */
+  }
+  .lastMarquee span{
+    font-size: .9rem;
+    margin: .4rem;
+  }
+}
+
+/* Tablets (Landscape) */
+@media only screen and (min-width: 992px) and (max-width: 1023px) {
+  .lastMarquee span{
+    margin: .5rem;
+  }
+}
+
+/* Small Laptops and Desktops */
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .lastMarquee span{
+    margin: .6rem;
+  }
+}
+
+/* Medium to Large Desktops */
+@media only screen and (min-width: 1200px) and (max-width: 1439px) {
+  .lastMarquee span{
+    margin: .7rem;
+  }
+}
+
+/* Large Desktops and TVs */
+@media only screen and (min-width: 1440px) {
+  .lastMarquee span{
+    margin: .9rem;
+  }
+}

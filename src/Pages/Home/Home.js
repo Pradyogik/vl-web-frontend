@@ -8,7 +8,7 @@ import {SecondFeaturedComponent} from '../../Component/FetureComponent/FeatureCo
 import img1 from '../../Assets/hero image.png'
 import img2 from '../../Assets/Frame 1000004907.png'
 import img3 from '../../Assets/Product page.png'
-import RestOfFeatures from './RestOfFeatures';
+import Discovery from '../../Component/FetureComponent/Discovery';
 
 
 
@@ -21,14 +21,15 @@ function Home() {
   <FeatureComponent headingPart1={'Simplify your listing through '} highlight={'WhatsApp'} img={img1} 
   para={'Effortlessly manage your store with intuitive  commands through WhatsApp. List products, set up SKU alerts, receive order notifications, update inventory, and communicate with customers seamlessly. '} />
 
-<SecondFeaturedComponent heading2={'AI-Driven'} highlight2={`Product Page`} heading2Part2={'generation'} secondImg={img3} 
+<SecondFeaturedComponent  heading2={'AI-Driven'} highlight2={`Product Page`} heading2Part2={'generation'} secondImg={img3} 
   para2={'Automatically generate high-quality product listings with optimized titles, descriptions, and images. Save time and ensure your products stand out.'} />
 
 <FeatureComponent headingPart1={'AI-Driven'} highlight={`Image Generation`} headingPart2={'for your store'} img={img2} 
   para={'Effortlessly enhance your product listings with AI-driven image generation. Create high-quality, optimized images that make your products look professional and appealing, saving you time and effort.'} />
  
 
- <RestOfFeatures />
+<Discovery />
+ 
   </>)
 }
 
