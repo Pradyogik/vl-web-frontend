@@ -15,8 +15,8 @@ Aos.init();
     <h6 className="text-center" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> Demo Video </h6>
     <h1 className="text-center" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" >Struggling with e-commerce setup <br/> and management</h1>
     <div className="container demoImgContainer pt-5 " data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">
-      <div className='downToTopMovingDiv'></div>
-      <div className='leftToRightMovingDiv'></div>
+      {/* <div className='downToTopMovingDiv'></div>
+      <div className='leftToRightMovingDiv'></div> */}
 
     <img className='' src={demoImg} />
     </div>

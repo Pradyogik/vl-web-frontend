@@ -358,25 +358,49 @@ body{
   justify-content: center;
   align-items: center;
   font-family: "Inter", sans-serif;
+  position: relative;
 
 }
 .demoImgContainer img {
+  display: block;
   box-shadow: 0 0 10px #00000012, 0 20px 25px -5px #0000001a;
   border-radius: 20px;
   width: 70%;
   height: 100%;
   object-fit: contain;
+  /* position: relative; */
+ 
 }
-/* .demoImgContainer img::after{
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.demoImgContainer::after , .demoImgContainer::before{
+  --angle: 0deg;
   content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: red !important;
-  z-index: 100;
-} */
-
-.downToTopMovingDiv{
+  position: absolute; 
+  width: 69%;
+  height: 92%;
+  /* background-color: red !important; */
+  border-radius: 20px;
+  z-index: -1;
+  background-image: conic-gradient(from var(--angle), transparent 90%,  #9482f2 );
+  animation: 3s spin linear infinite;
+}
+.demoImgContainer::before{
+  filter: blur(.5rem);
+  opacity: .2;
+}
+@keyframes spin {
+  from{
+    --angle :0deg
+  }
+  to{
+    --angle :360deg
+  }
+}
+/* .downToTopMovingDiv{
   position: absolute;
   left: 0%;
   bottom: 0%;
@@ -386,9 +410,9 @@ body{
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   animation: updown 2s cubic-bezier(0.67, 0.66, 0.74, 0.74) infinite both;
-}
+} */
 
-@keyframes updown {
+/* @keyframes updown {
   0%{
     transform: translateY(100%);
   }
@@ -401,9 +425,9 @@ body{
   100%{
     transform: translateY(-350%);
   }
-}
+} */
 
-.leftToRightMovingDiv{
+/* .leftToRightMovingDiv{
   position: absolute;
   left: 0%;
   top: 7%;
@@ -413,8 +437,8 @@ body{
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   animation: leftright 2s cubic-bezier(0.67, 0.66, 0.74, 0.74) infinite both;
-}
-
+} */
+/* 
 @keyframes leftright{
   0%{
     transform: translateX(-230%);
@@ -449,7 +473,7 @@ body{
   100%{
     transform: translateX(550%);
   }
-}
+} */
 /* Mobile Phones (Portrait) */
 @media only screen and (max-width: 320px){
   .demoContainer{
@@ -471,15 +495,22 @@ body{
   .demoImgContainer {
     padding-left: 0 !important;
     padding-right: 0 !important;
+  border-radius: 20px;
+
   }
-  .leftToRightMovingDiv{
+  .demoImgContainer::after , .demoImgContainer::before{
+    width: 102%;
+    height: 82%;
+
+  }
+  /* .leftToRightMovingDiv{
     left: 0%;
     top: 18.5%;
 }
 .downToTopMovingDiv{
   left: -2%;
   bottom: -7%;
-}
+} */
 }
 
 @media only screen and (min-width: 321px)  and (max-width: 375px) {
@@ -502,15 +533,22 @@ body{
   .demoImgContainer {
     padding-left: 0 !important;
     padding-right: 0 !important;
+  border-radius: 20px;
+
   }
-  .leftToRightMovingDiv{
+  .demoImgContainer::after , .demoImgContainer::before{
+    width: 101%;
+    height: 84%;
+
+  }
+  /* .leftToRightMovingDiv{
     left: 0%;
     top: 17%;
 }
 .downToTopMovingDiv{
   left: -2%;
   bottom: -7%;
-}
+} */
 }
 @media only screen and (min-width: 376px)  and (max-width: 480px) {
       .demoContainer{
@@ -532,19 +570,25 @@ body{
       .demoImgContainer {
         padding-left: 0 !important;
         padding-right: 0 !important;
+      border-radius: 20px;
+    /* margin: 10px; */
       }
-  .leftToRightMovingDiv{
+      .demoImgContainer::after , .demoImgContainer::before{
+        width: 101.5%;
+        height: 86%;
+      }
+  /* .leftToRightMovingDiv{
     left: 0%;
     top: 14%;
 }
 .downToTopMovingDiv{
   left: -2%;
   bottom: -7%;
-}
+} */
 }
 
 /* Mobile Phones (Landscape) */
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 570px) {
   .demoContainer{
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
@@ -559,22 +603,61 @@ body{
     width: 100%;
     border-radius: 10px;
   }
-  .leftToRightMovingDiv{
+  .demoImgContainer {
+  border-radius: 20px;
+  box-sizing: border-box;
+  }
+  .demoImgContainer::after , .demoImgContainer::before{
+    width: 97%;
+    height: 88%;
+  }
+  /* .leftToRightMovingDiv{
     left: 0%;
     top: 13%;
+} */
 }
+@media only screen and (min-width: 571px) and (max-width: 767px) {
+  .demoContainer{
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  .demoContainer h1 {
+    font-size: clamp(1.3rem, 2vw + 1rem, 1.5rem);
+  }
+  .demoContainer h6 {
+    font-size: clamp(0.8rem, 1vw + 0.5rem, 1rem);
+  }
+  .demoImgContainer img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .demoImgContainer {
+  border-radius: 20px;
+  box-sizing: border-box;
+  }
+  .demoImgContainer::after , .demoImgContainer::before{
+    width: 97%;
+    height: 89%;
+  }
 }
-
 /* Tablets (Portrait) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .demoImgContainer img {
     width: 90%;
     border-radius: 10px;
   }
-  .leftToRightMovingDiv{
+  .demoImgContainer {
+    border-radius: 20px;
+    box-sizing: border-box;
+    }
+    .demoImgContainer::after , .demoImgContainer::before{
+      width: 88%;
+      height: 90.5%;
+    }
+  /* .leftToRightMovingDiv{
     left: 0%;
     top: 9.4%;
-}
+} */
 }
 
 /* Tablets (Landscape) */
@@ -583,10 +666,18 @@ body{
     width: 90%;
     border-radius: 10px;
   }
-  .leftToRightMovingDiv{
+  .demoImgContainer {
+    border-radius: 10px;
+    box-sizing: border-box;
+    }
+    .demoImgContainer::after , .demoImgContainer::before{
+      width: 88.5%;
+      height: 93%;
+    }
+  /* .leftToRightMovingDiv{
     left: 0%;
     top: 8.1%;
-}
+} */
 }
 
 /* Small Laptops and Desktops */
@@ -595,16 +686,32 @@ body{
     width: 90%;
     border-radius: 10px;
   }
-  .leftToRightMovingDiv{
+  .demoImgContainer {
+    border-radius: 10px;
+    box-sizing: border-box;
+    }
+    .demoImgContainer::after , .demoImgContainer::before{
+      width: 88.5%;
+      height: 93%;
+    }
+  /* .leftToRightMovingDiv{
     left: 0%;
     top: 8.1%;
+} */
 }
-}
-  @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-    .leftToRightMovingDiv{
+  @media only screen and (min-width: 1400px) and (max-width: 3000px) {
+    .demoImgContainer {
+      border-radius: 20px;
+      box-sizing: border-box;
+      }
+      .demoImgContainer::after , .demoImgContainer::before{
+        width: 69.5%;
+        height: 94%;
+      }
+    /* .leftToRightMovingDiv{
       left: 0%;
       top: 8%;
-  }
+  } */
 
 }
 /* home features starts here */
