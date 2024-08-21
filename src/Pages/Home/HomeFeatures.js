@@ -2,8 +2,7 @@ import React from 'react';
 import './Home.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { ImArrowUpRight2 } from "react-icons/im";
 import bannerImg from '../../Assets/Group 1000004938.png';
 import animateBannerImg from '../../Assets/Group 1000004939.png';
 
@@ -24,7 +23,7 @@ function HomeFeatures(){
 
 
 
-    <div className='container hFeatureBannerContainer pt-5'>
+    <div className='container hFeatureBannerContainer p-5'>
 
     <div className='hFeatureBannerContent'>
 
@@ -34,11 +33,11 @@ function HomeFeatures(){
    
     {/* <button class="btn mt-4" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">Get early access <i><FontAwesomeIcon icon={faArrowRight} style={{color: 'white'}} /> </i></button> */}
 
-    <button class=" mt-4 btn button button--calypso" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span>Get early access</span> </button>
+    <button class=" mt-4 btn button button--calypso" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span>Learn More <ImArrowUpRight2 /> </span> </button>
 
     </div>
 
-    <div className='hFeatureBannerImg ' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">
+    <div className='hFeatureBannerImg' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">
         <img className='bannerImg' src={bannerImg} />
         <img className='animeBannerImg' src={animateBannerImg} />
 

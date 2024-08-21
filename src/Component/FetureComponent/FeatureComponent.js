@@ -2,13 +2,12 @@ import React from 'react';
 import './FeatureComponent.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { ImArrowUpRight2 } from "react-icons/im";
 
  function FeatureComponent(props) {
     
   return (<>
-  <div className={`container featureCompContainer py-5 ${props.direction}`}>
+  <div className={`container featureCompContainer p-5  ${props.direction}`}>
 
 
   <div className='featureCompImg '>
@@ -22,7 +21,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
     <h5 className='pt-4' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">{props.para}</h5>
 
-    <button class=" mt-4 btn button button--calypso" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span>Get early access</span> </button>
+    <button class=" mt-4 btn button button--calypso" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span>Learn More <ImArrowUpRight2 />  </span> </button>
 
     </div>
 
@@ -37,16 +36,17 @@ export default React.memo(FeatureComponent);
 export function SecondFeaturedComponent(props){
 
     return(<>
-    <div className={`container featureCompContainer featureCompContainer2 py-5  ${props.direction}` }>
+    <div className={`container featureCompContainer featureCompContainer2 p-5   ${props.direction}` }>
 
 
     <div className='featureCompContent p-2'>
-    <span data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span></span> FEATURES </span>
+    {/* <span data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span></span> FEATURES </span> */}
+    <span className='featureTag' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span></span> FEATURES </span>
     <h1 className='pt-4' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> {props.heading2}  using <span style={{color: "#ffc107", backgroundColor: 'transparent' , display: 'inline-block' , fontSize: 'inherit'}}> {props.highlight2} </span> {props.heading2part2}</h1>
 
     <h5 className='pt-4 ' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true">{props.para2}</h5>
 
-    <button class=" mt-4 btn button button--calypso" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span>Get early access</span> </button>
+    <button class=" mt-4 btn button button--calypso" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"> <span>Learn More <ImArrowUpRight2 /> </span> </button>
 
     </div>
 
@@ -54,10 +54,6 @@ export function SecondFeaturedComponent(props){
   <div className='featureCompImg '>
         <img src={props.secondImg} />
     </div>
-
-    
-
-    
 
     </div>
 

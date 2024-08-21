@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import "./Header.css";
+import { GoDash } from "react-icons/go";
 
 function Header() {
   const [active, setActive] = useState("");
@@ -17,7 +18,7 @@ function Header() {
         <p>Vya<span>par</span> Launch<span>pad</span></p>
         </NavLink>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler collapsed"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -25,7 +26,13 @@ function Header() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          {/* <span className="navbar-toggler-icon"></span> */}
+          <span className="toggler-icon top-bar"></span>
+          <span className="toggler-icon middle-bar"></span>
+          <span className="toggler-icon bottom-bar"></span>
+
+          
+          
         </button>
         <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
         <span className="navbarBrandDiv">
