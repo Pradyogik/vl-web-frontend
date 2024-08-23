@@ -9,6 +9,8 @@ import img1 from '../../Assets/hero image.png'
 import img2 from '../../Assets/Frame 1000004907.png'
 import img3 from '../../Assets/Product page.png'
 import Discovery from '../../Component/FetureComponent/Discovery';
+import HomePricing from './HomePricing';
+import FAQ from './FAQ';
 
 
 
@@ -29,6 +31,10 @@ function Home() {
  
 
 <Discovery />
+
+<HomePricing />
+
+<FAQ/>
  
   </>)
 }

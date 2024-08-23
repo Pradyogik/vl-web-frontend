@@ -2,6 +2,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 body{
   overflow-x: hidden !important;
 }
@@ -64,7 +68,16 @@ body{
   color: white;
   font-weight: 500;
 }
+.heroBtnContainer a:nth-child(1):hover {
+  /* background: rgb(152, 136, 244); */
+  transition: all;
+  background: linear-gradient(
+    90deg,
+    rgb(97, 74, 228) 90%,
+    rgba(113, 93, 227, 1) 100%
+  )
 
+}
 .heroBtnContainer a:nth-child(2) {
   padding: 0.7rem 1.4rem;
   border-color: #ffc107;
@@ -74,10 +87,9 @@ body{
 }
 
 .heroBtnContainer a:nth-child(2):hover {
-  /* background-color: #ffc107;
-    color: #fff !important; */
+  background-color: #ffc107;
+    color: #fff !important;
 }
-
 .heroLastHeading {
   color: #635e80;
 }
@@ -106,6 +118,8 @@ body{
   .heroContainer {
     flex-direction: column;
     padding: 0 !important;
+    position: relative;
+
   }
 
   .heroContent h1 {
@@ -133,16 +147,38 @@ body{
   .heroLastHeading {
     font-size: 0.7rem;
   }
-  .leftImgContainer , .RightImgContainer{
-  display: none;
-
+  .leftImgContainer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url('../../Assets/Group\ 1000004932.png') no-repeat;
+    width: 80px; 
+  height: 80px; 
+  padding-left: 80px;
   }
+  .RightImgContainer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url('../../Assets/Group\ 1000004931-1.png') no-repeat;
+    width: 90px; 
+    height: 150px; 
+    padding-left: 90px; 
+  }
+ 
 }
 
 /* Mobile Phones (Landscape) */
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .heroContainer {
     flex-direction: column;
+    position: relative;
   }
 
   .heroContent h1 {
@@ -165,7 +201,6 @@ body{
   .heroBtnContainer a:nth-child(2) {
     font-size: 0.9rem;
     font-size: clamp(0.9rem, 1.5vw + 0.5rem, 1rem);
-
     padding: 0.55rem 1.4rem;
   }
   .heroBtnContainer a:nth-child(2) img {
@@ -175,6 +210,30 @@ body{
   .heroLastHeading {
     font-size: 0.8rem;
     font-size: clamp(0.8rem, 1.5vw + 0.5rem, 1rem);
+  }
+  .leftImgContainer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url('../../Assets/Group\ 1000004932.png') no-repeat;
+    width: 100px; 
+  height: 80px; 
+  padding-left: 100px;
+  }
+  .RightImgContainer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url('../../Assets/Group\ 1000004931-1.png') no-repeat;
+    width: 90px; 
+    height: 150px; 
+    padding-left: 90px; 
   }
 }
 
@@ -207,6 +266,30 @@ body{
   }
   .heroLastHeading {
     font-size: 0.9rem;
+  }
+  .leftImgContainer{
+    position: absolute;
+    left: 10%;
+    bottom: 30%;
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url('../../Assets/Group\ 1000004932.png') no-repeat;
+    width: 80px; 
+  height: 80px; 
+  padding-left: 80px;
+  }
+  .RightImgContainer {
+    position: absolute;
+    right: 10%;
+    bottom: 30%;
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url('../../Assets/Group\ 1000004931-1.png') no-repeat;
+    width: 90px; 
+    height: 150px; 
+    padding-left: 90px; 
   }
 }
 
@@ -946,6 +1029,7 @@ body{
     justify-content: flex-start !important;
     align-items: flex-start!important;
     padding: 1rem !important;
+    width: 95%;
   } 
   .hFeatureBannerContent {
     width: 100%;
@@ -1011,11 +1095,14 @@ body{
 }
 .homeFeatureContent h6 {
   font-size: clamp(0.9rem, 1vw + 0.6rem, 1rem);
+  /* padding-top: 0 !important; */
 }
 
 .homeFeatureContent h1{
   /* font-size: 1.2rem; */
   font-size: clamp(1.2rem, 2vw + 1rem, 2rem);
+  /* padding-top: 0 !important; */
+
 }
 .homeFeatureContent h4{
   /* font-size: 0.8rem; */
@@ -1027,43 +1114,52 @@ body{
  display: none; 
 }
 .hFeatureBannerContainer{
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;  
+  width: 95%;
+  /* padding-top: 1rem !important;
+  padding-bottom: 1rem !important;   */
 }
 .hFeatureBannerContent .hfeatureTag:nth-child(1){
   font-size: .6rem;
 
 }
 .hFeatureBannerContainer{
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center !important;
   align-items: center !important;
 } 
 .hFeatureBannerContent {
   width: 100%;
-  text-align: center !important;
+  text-align: left !important;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   
 }
 .hFeatureBannerContent h1{
   font-size: clamp(1.2rem, 2vw + 1rem, 2rem);
+  padding-top: 0 !important;
 
+
+}
+.hFeatureBannerContent h1 br{
+  display: none;
 }
 .hFeatureBannerContent h5{
   /* font-size: 0.8rem; */
   font-size: clamp(0.8rem, 1vw + 0.9rem, 1rem);
+  padding-top: 0 !important;
 
 }
 .hFeatureBannerContent button{
   /* font-size: .8rem; */
   font-size: clamp(0.8rem, 1vw + 0.9rem, 1rem);
+  margin-top: 0 !important;
 
 }
 .hFeatureBannerImg {
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
   justify-content: center;
 }
 /* .hFeatureBannerImg img{
@@ -1078,6 +1174,7 @@ body{
   width: 100%;
   height: 170%;
   object-fit: contain;
+  animation-play-state: paused;
   /* padding: .5rem; */
 }
 
@@ -1096,8 +1193,8 @@ body{
    }
    .hFeatureBannerContainer{
     max-width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    width: 97%;
+    padding: 3rem 0.5rem !important;
     /* justify-content: flex-end; */
    }
    .hFeatureBannerImg{
@@ -1117,6 +1214,7 @@ body{
     height: 174%;
     object-fit: contain;
     /* padding: .5rem; */
+    animation-play-state: paused;
   }
   
   .bannerImg{
@@ -1129,11 +1227,18 @@ body{
     width: 60%;
    }
    .hFeatureBannerContent h1{
-    font-size: 2.3rem;
+    font-size: 2.1rem;
+    padding-top: 0 !important;
    }
    .hFeatureBannerContent h5{
     font-size: 1rem;
+    padding-top: 0 !important;
+     
    }
+   .hFeatureBannerContent button{
+    margin-top: 0 !important;
+  
+  }
 }
 
 /* Tablets (Landscape) */
@@ -1143,8 +1248,8 @@ body{
    }
    .hFeatureBannerContainer{
     max-width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    width: 97%;
+    padding: 3rem 1rem !important;
     /* justify-content: flex-end; */
    }
    .hFeatureBannerImg{
@@ -1184,8 +1289,8 @@ body{
    }
    .hFeatureBannerContainer{
     max-width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    width: 97%;
+    padding: 3rem 1rem !important;
     /* justify-content: flex-end; */
    }
    .hFeatureBannerImg{
@@ -1220,17 +1325,373 @@ body{
 @media only screen and (min-width: 1200px) and (max-width: 1439px) {
   .animeBannerImg{
     right: 0;
-    bottom: -29%;
+    bottom: -10%;
     width: 100%;
-    height: 174%;
+    height: 120%;
     object-fit: contain;
     /* padding: .5rem; */
   }
   
   .bannerImg{
     margin-top: 3rem;
-    width: 100%;
+    width: 70%;
     height: 100% !important;
     object-fit: contain;
+  }
+}
+/* home Pricing Starts here */
+.hpricing-section{
+  padding: 5rem 0 !important;
+  font-family: "Inter", sans-serif;
+}
+.hpricing-section-child{
+  padding: 5rem 0 !important; 
+}
+.hpricing-section h1 {
+  /* color: #333; */
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+.hpricing-section .choosePlan {
+ color: #9CA3AF;
+ /* font-family: "Inter", sans-serif; */
+
+}
+
+.hpricing-section .highlight1 {
+  color: #ffb400;
+  font-family: "Inter", sans-serif;
+}
+
+.hpricing-section p {
+  font-size: 1.2rem;
+  color: #666;
+  font-family: "Inter", sans-serif;
+  /* margin-bottom: 2rem; */
+}
+
+.hpricing-card {
+  border-radius: 30px;
+  border: none;
+  outline: 1px solid #9ca3af1a;
+  padding: 1rem .5rem;
+  font-family: "Inter", sans-serif;
+}
+/* .hpricing-card:nth-child(1){
+  animation: 3s spin linear infinite;
+  position: relative;
+} */
+.hpricing-card h5 {
+  /* font-size: 1.5rem; */
+  /* font-weight: bold; */
+  font-family: "Inter", sans-serif;
+}
+
+.hpricing-card .card-price {
+  font-size: 2.5rem;
+  font-family: "Inter", sans-serif;
+  /* font-weight: bold; */
+  /* color: #333; */
+}
+
+.hpricing-card .period {
+  /* font-size: 1rem; */
+  color: #9CA3AF;
+  font-family: "Inter", sans-serif;
+}
+.hpricing-card .btn {
+  width: 90%;
+  font-family: "Inter", sans-serif;
+  /* color: black !important; */
+}
+.hpricing-card .firstBtn span:hover{
+  color: white!important;
+}
+.hpricing-card .firstBtn:hover{
+  color: black !important;
+}
+.hpricing-card .firstBtn{
+  background-color: rgba(253 , 253, 253 , 100%);
+  outline: 1px solid #9ca3af1a;
+  box-shadow: 0 2px 6px rgb(17, 3, 48 , 7%) !important;
+}
+.hpricing-card .firstBtn span{
+  color: black !important;
+  width: 90% !important;
+  display: inline-block;
+}
+
+.list-unstyled{
+  display: flex !important;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 0 .5rem;
+  text-align: left;
+  /* font-family: "Inter", sans-serif; */
+}
+.list-unstyled li{
+  display: flex !important;
+  /* flex-direction: column; */
+  gap: 1rem;
+}
+
+.hpricing-section .featureTag:nth-child(1) {
+  background-color: #ffe69999;
+  color: rgb(252, 189, 1);
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  width: fit-content !important;
+  gap: 5px;
+  align-items: center;
+  padding: 5px;
+  border-radius: 7px;
+  font-family: "Inter", sans-serif;
+}
+.hpricing-section .featureTag > span:nth-child(1) {
+  background-color: rgb(252, 189, 1);
+  border-radius: 50%;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 5px;
+}
+.purpleTag{
+  display: inline-block !important;
+  font-size: 13px !important;
+  background-color: #EDE9FE !important;
+  color: #8B5CF6 !important;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-family: "IBM Plex Mono", monospace !important;
+
+}
+.purpleTag span:nth-child(1){
+  background-color: #8B5CF6 !important;
+}
+.checkContainer span{
+  display: inline-block;
+  padding-right: 3rem;
+  color: rgb(252, 189, 1);
+  font-weight: 500;
+}
+
+/* Mobile Phones (Portrait) */
+@media only screen and (max-width: 480px) {
+  .hpricing-section{
+    padding-top: 0 !important;
+  }
+  .hpricing-section h1 {
+    font-size: 2rem;
+  }
+  .hpricing-section-child {
+    padding: 1rem 0 !important;
+}
+.hpricing-section .hpricingCol{
+  width: 90% !important;
+  padding-right: 0 !important;
+}
+.hpricing-section .hpricingColAuto{
+  padding-right: 0 !important;
+}
+.hpricing-section .hpricingColAuto span{
+  padding-right: 0 !important;
+}
+.hpricing-section .hpricingColAuto p{
+  /* padding-right: 1rem !important; */
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.checkContainer{
+  width: 100%;
+}
+.hpricingRow{
+  width: 100%;
+
+}
+}
+
+/* Mobile Phones (Landscape) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .hpricing-section{
+    padding-top: 0 !important;
+  }
+  .hpricing-section h1 {
+    font-size: 2rem;
+  }
+  .hpricing-section-child {
+    padding: 1rem 0 !important;
+}
+.hpricing-section .hpricingCol{
+  width: 60% !important;
+  padding-right: 0 !important;
+}
+.hpricing-section .hpricingColAuto{
+  padding-right: 0 !important;
+}
+.hpricing-section .hpricingColAuto span{
+  padding-right: 0 !important;
+}
+.hpricing-section .hpricingColAuto p{
+  /* padding-right: 1rem !important; */
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.checkContainer{
+  width: 100%;
+}
+.hpricingRow{
+  width: 100%;
+
+}
+}
+
+/* Tablets (Portrait) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+ .hpricingCol{
+  min-width: 300px;
+  flex-grow: 1;
+ }
+ .hpricingRow :nth-child(2){
+  order: 3;
+ }
+ .hpricing-section{
+  padding-bottom: 0 !important;
+ }
+ 
+
+}
+
+/* Tablets (Landscape) */
+@media only screen and (min-width: 992px) and (max-width: 1023px) {
+  .hpricingCol{
+    min-width: 300px;
+    flex-grow: 1;
+   }
+   /* .hpricingRow :nth-child(2){
+    order: 3;
+   } */
+   .hpricing-section{
+    padding-bottom: 0 !important;
+   }
+   
+}
+
+/* Small Laptops and Desktops */
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .hpricingCol{
+    /* min-width: 300px; */
+    flex-grow: 1;
+   }
+   /* .hpricingRow :nth-child(2){
+    order: 3;
+   } */
+   .hpricing-section{
+    padding-bottom: 0 !important;
+   }
+   
+}
+
+/* Medium to Large Desktops */
+@media only screen and (min-width: 1200px) and (max-width: 1439px) {
+  .hpricingCol{
+    min-width: 350px;
+   }
+}
+
+/* Large Desktops and TVs */
+@media only screen and (min-width: 1440px) {
+  .hpricingCol{
+    min-width: 350px;
+   }
+}
+/* faq container starts here */
+.faqContainer{
+  display: flex;
+ align-items: center;
+ background-color: #715DE3;
+ padding: 4rem 2rem;
+ border-radius: 30px;
+}
+.faqWrapper1{
+  font-family: "Outfit", sans-serif;
+}
+.faqWrapper1 h1{
+  font-size: 4rem;
+  color: white;
+}
+.faqWrapper1 h1 span{
+  font-size: inherit;
+  color: #FFD047;
+}
+.faqWrapper1 h5{
+  color: #DEDEDE;
+  font-weight: 400 !important;
+}
+.faqWrapper2 , .accordion-item , .accordion-button{
+ background-color: #715DE3 !important;
+ font-family: "Outfit", sans-serif;
+
+}
+.accordion-item{
+  border: none !important;
+
+}
+.accordion-button{
+  border-bottom: 1px solid #ffffff28;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  padding: 1.2rem 1.25rem;
+}
+.accordion-button::after {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+.accordion-button:not(.collapsed) {
+color: white;
+box-shadow: none;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-body{
+  color: #DEDEDE;
+  font-weight: 400 !important;
+  font-size: 1.1rem;
+}
+.lastBtn{
+  border-bottom: none !important;
+  border-radius: 30px;
+}
+/* Mobile Phones (Portrait) */
+@media only screen and (max-width: 480px) {
+.faqContainer{
+ flex-direction: column; 
+ padding: 1rem !important;
+ width: 95%;
+}
+.faqWrapper1 , .faqWrapper2{
+  width: 98% !important;
+}
+.faqWrapper1 h1{
+  font-size: 3.5rem;
+}
+.accordion-button{
+  padding: 1rem 0 !important;
+}
+}
+
+/* Mobile Phones (Landscape) */
+@media only screen and (min-width: 481px) and (max-width: 991px) {
+  .faqContainer{
+    flex-direction: column; 
+    padding: 1rem !important;
+    width: 95%;
+   }
+   .faqWrapper1 , .faqWrapper2{
+    width: 100% !important;
   }
 }

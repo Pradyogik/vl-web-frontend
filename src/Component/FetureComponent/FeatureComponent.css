@@ -132,7 +132,7 @@
       }
       .featureCompImg{
         width: 90%;
-        margin-right: 1.5rem;
+        /* margin-right: 1.5rem; */
         justify-content: center;
         animation-play-state: paused;
       }
@@ -198,7 +198,7 @@ margin-top: 0 !important;
       }
       .featureCompImg {
         width: 90%;
-        margin-right: 1.5rem;
+        /* margin-right: 1.5rem; */
         justify-content: flex-start;
         animation-play-state: paused;
 
@@ -342,6 +342,7 @@ margin-top: 0 !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: "Inter", sans-serif;
   }
   .discoveryWrapper h4{
     color: #ffc107 !important;
@@ -352,16 +353,76 @@ margin-top: 0 !important;
     font-size: 1rem;
     font-weight: 500;
     width: fit-content !important; 
-
+    font-family: "Inter", sans-serif;
     
   };
   .discoveryWrapper .hd1{
     color: #ffc107 !important;
+    font-family: "Inter", sans-serif;
   }
   .lastMarquee span{
     background-color: rgba(84, 84, 84, 0.03);
     color: rgba(48, 48, 48, 0.8);
+    font-family: "Inter", sans-serif;
   }
+  .discoveryImg2Container h6{
+    color: #F97316;
+    font-family: "Inter" , sans-serif;
+    
+  }
+  .discoveryImg2Container h1{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+  }
+  .discoveryImg3Container h6{
+    color: #F97316;
+    font-family: "Inter" , sans-serif;
+  }
+  .discoveryImg3Container h1{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+  }
+  .twoImgContainer h2{
+    color: #595A5C;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+  }
+  .twoImgContainer p{
+    color: #595A5C;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+  }
+  .twoImgContainer div:nth-child(1) img{
+  animation: slider 7s cubic-bezier(0.67, 0.66, 0.74, 0.74) infinite both;
+
+  }
+  /* @keyframes roll {
+    0%{
+      transform: translateY(-20%);
+      overflow: hidden;
+    }
+    25%{
+      transform: translateY(-40%);
+    }
+    50%{
+      transform: translateY(-60%);
+    }
+    75%{
+      transform: translateY(-80%);
+    }
+    100%{
+      transform: translateY(-100%);
+    }
+  } */
+   
+  .twoImgContainer div:nth-child(2){
+    /* display: flex; */
+    /* flex-direction: column; */
+  }
+  .twoImgContainer div:nth-child(2) img{
+  /* transform: translateY(-10%);
+  overflow: hidden; */
+  animation: roll 7s cubic-bezier(0.67, 0.66, 0.74, 0.74) infinite both;
+  overflow: hidden;
+  }
+
+ 
 
   /* Mobile Phones (Portrait) */
 @media only screen and (max-width: 480px) {
@@ -379,10 +440,51 @@ margin-top: 0 !important;
     display: none;
   }
   .lastMarquee span{
-    font-size: .7rem;
-    margin: .3rem;
+    font-size: .9rem;
+    margin: .5rem;
   }
-  
+  .discoveryContainer{
+    padding-bottom: 0 !important;
+  }
+  .discoveryImg2Container img{
+    content:url('../../Assets/Art\ 6.png')
+  }
+
+  .discoveryImg2Container h1{
+    font-size: 1.2rem;
+    padding: 0 .5rem;
+    font-weight: 600;
+  }
+  .discoveryImg3Container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem !important;
+
+  }
+  .twoImgContainer{
+    flex-direction: column;
+    text-align: center !important;
+  }
+  .twoImgContainer div:nth-child(1){
+    width: 100% !important;
+  }
+  .twoImgContainer div:nth-child(1) img{
+    animation-play-state: paused;
+  }
+  .twoImgContainer div:nth-child(2){
+    width: 100% !important;
+  }
+  .discoveryImg3Container h1{
+    font-size: 1.2rem;
+    padding: 0 .5rem;
+    font-weight: 600;
+  }
+  .twoImgContainer h2{
+    font-size: 1.2rem;
+  }
+  .twoImgContainer p{
+    font-size: .8rem;
+  }
 }
 
 /* Mobile Phones (Landscape) */
@@ -401,9 +503,47 @@ margin-top: 0 !important;
     display: none;
   }
   .lastMarquee span{
-    font-size: .9rem;
-    margin: .4rem;
+    font-size: 1rem;
+    margin: .6rem;
   }
+  .discoveryImg2Container img{
+    content:url('../../Assets/Art\ 6.png')
+  }
+  .discoveryImg2Container h1{
+    font-size: clamp(1.2rem, 2vw + 1rem, 2rem);
+    /* padding: 0 .5rem; */
+    font-weight: 600;
+  }
+  .discoveryImg3Container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem !important;
+
+  }
+  .twoImgContainer{
+    flex-direction: column;
+    text-align: center !important;
+  }
+  .twoImgContainer div:nth-child(1){
+    width: 100% !important;
+  }
+  .twoImgContainer div:nth-child(1) img{
+    animation-play-state: paused;
+  }
+  .twoImgContainer div:nth-child(2){
+    width: 100% !important;
+  }
+  .discoveryImg3Container h1{
+    font-size: clamp(1.2rem, 2vw + 1rem, 2rem);
+    /* padding: 0 .5rem; */
+    /* font-weight: 600; */
+  }
+  .twoImgContainer h2{
+    font-size: clamp(1rem, 2vw + 1rem, 2rem);
+  }
+  .twoImgContainer p{
+    font-size: .9rem;
+  } 
 }
 
 /* Tablets (Portrait) */
@@ -422,9 +562,28 @@ margin-top: 0 !important;
     /* display: none; */
   }
   .lastMarquee span{
-    font-size: .9rem;
+    font-size: 1.2rem;
     margin: .4rem;
   }
+  .twoImgContainer{
+    gap: 1rem;
+  }
+  .discoveryImg2Container h1{
+    font-size: 2.1rem !important;
+    font-weight: 600;
+  }
+  .discoveryImg3Container h1{
+    font-size: clamp(2.1rem, 2vw + 1rem, 2.5rem);
+    /* padding: 0 .5rem; */
+    /* font-weight: 600; */
+  }
+  .twoImgContainer h2{
+    font-size: clamp(1.2rem, 2vw + 1rem, 2rem);
+  }
+  .twoImgContainer p{
+    font-size: 1rem;
+  } 
+  
 }
 
 /* Tablets (Landscape) */
@@ -432,12 +591,18 @@ margin-top: 0 !important;
   .lastMarquee span{
     margin: .5rem;
   }
+  .twoImgContainer{
+    gap: 1.5rem;
+  }
 }
 
 /* Small Laptops and Desktops */
 @media only screen and (min-width: 1024px) and (max-width: 1199px) {
   .lastMarquee span{
     margin: .6rem;
+  }
+  .twoImgContainer{
+    gap: 1.5rem;
   }
 }
 

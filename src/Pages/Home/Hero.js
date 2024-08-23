@@ -23,7 +23,7 @@ function Hero() {
     <p class="mt-3 heroLastHeading">NB: No credit card required. Plans start at $0/month.</p>
   </div>
   <div className='RightImgContainer'>
-    <img style={{width: '100%' , height: '100%' , objectFit: 'cover'}} src={rightImg}/>
+    <img className='rightImg' style={{width: '100%' , height: '100%' , objectFit: 'cover'}} src={rightImg}/>
   </div> 
     </div> 
   </>)
